@@ -2,6 +2,8 @@
 import streamlit as st
 import pandas as pd
 import importlib.util
+import rules_module
+results = rules_module.verify_excel_file(uploaded_file)
 
 st.set_page_config(page_title="Dynamic Rule-Based Data Verification", layout="wide")
 st.title("📊 Dynamic Rule-Based Data Verification App")
@@ -44,3 +46,4 @@ if data_file and rules_file:
 
 st.markdown("---")
 st.markdown("Created with Streamlit")
+
